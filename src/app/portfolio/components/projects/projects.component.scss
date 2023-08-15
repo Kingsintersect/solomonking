@@ -1,0 +1,30 @@
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto",sans-serif;
+	font-weight: 700;
+	color: #05364d;
+}
+.list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.list li {
+	margin-bottom: 7px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.list li span {
+	font-family: "Roboto",sans-serif;
+	color: #000000;
+	font-size: 16px;
+	font-weight: 500;
+	width: 97px;
+	display: inline-block;
+}
+.list li i {
+	color: #f1cd09;
+}
