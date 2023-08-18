@@ -1,0 +1,56 @@
+{
+    "realhomes": {
+        "title":"REALHOMES",
+        "imgUrl": [
+            "assets/projects/rh1.png",
+            "assets/projects/rh2.png",
+            "assets/projects/rh3.png",
+            "assets/projects/rh4.png",
+            "assets/projects/rh5.png",
+            "assets/projects/rh6.png"
+        ],
+        "description": "REALHOMES - an amazing Real Estate Application. With rental homes and for-sale properties, advanced property filtering, property details page with an image carousel, and much more, Realtor is the best Real Estate App in the whole of west Africa. This project was built using React Js, Next Js, Rapid API and Chakra UI",
+        "rating": "5",
+        "client": "CONSUMER API",
+        "webaddress": "https://realhome.vercel.app/",
+        "completed": " 17 Nov 2021"
+
+    },
+    "kshoppings": {
+        "title":"KSHOPPINGS",
+        "imgUrl": [
+            "assets/projects/ks1.png",
+            "assets/projects/ks2.png",
+            "assets/projects/ks3.png",
+            "assets/projects/ks4.png",
+            "assets/projects/ks5.png",
+            "assets/projects/ks6.png",
+            "assets/projects/ks7.png",
+            "assets/projects/ks8.png",
+            "assets/projects/ks9.png",
+            "assets/projects/ks10.png"
+        ],
+        "description":  "KSHOPPINGS - A real world E-Commerce Application with Angular, Firebase, Material UI and Bootstrap 5. The features of this projuect includes... list of categories; list of products using product card; add product to the shopping cart; using the application as an annonymouse user; shopping cart page which allows the user to increase or decrease the quantity of each item they've selected, the ability to clear the cart and to checkout. they can also see the sum total of the price of all the items in the cart; login and register system; logged in user can view their orders. - it also contains admin privilages, where the admin has the rights to manage all products, edit /delete/add new product to the application. the admin can view the orders and manage the users orders",
+        "rating": "4",
+        "client": "CONSUMER API",
+        "webaddress": "https://kingsintersect.github.io/kshopings/",
+        "completed": "30 Jan 2023"
+    },
+    "chiblog": {
+        "title":"CHI-BLOG",
+        "imgUrl": [
+            "assets/projects/cb1.png",
+            "assets/projects/cb2.png",
+            "assets/projects/cb3.png",
+            "assets/projects/cb4.png",
+            "assets/projects/cb5.png",
+            "assets/projects/cb6.png",
+            "assets/projects/cb7.png"
+        ],
+        "description":  "GraphQL - HeadlessCMS - With featured and recent posts, categories. full markdown articles, author information, comments, and much more, this fully responsive HeadlessCMS Blog App is the best GraphQL Blog Application. And what's best of all is that you or your clients can manage the blog from a dedicated Content Management System. Built with the newest technologies such as React JS, NextJS, Tailwind CSS, GraphQL, and GraphCMS. ",
+        "rating": "3",
+        "client": "CONSUMER API",
+        "webaddress": "https://chi-blog.vercel.app/",
+        "completed": " 25 Dec 2021"
+    }
+}
