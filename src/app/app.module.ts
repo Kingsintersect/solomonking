@@ -18,6 +18,8 @@ import { MyServicesComponent } from './portfolio/components/my-services/my-servi
 import { ProjectsComponent } from './portfolio/components/projects/projects.component';
 import { ProjectsDetailsComponent } from './portfolio/components/projects-details/projects-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ServicesService } from './services/services.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,8 +43,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbModule,    
     BrowserAnimationsModule,
     CarouselModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    ServicesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

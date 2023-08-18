@@ -10,13 +10,13 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
                 <div class="card shadow-sm">
-                    <img src="assets/projects/realhomes.png" alt="Real Homes Estate API Project">
+                    <img src="assets/projects/rh1.png" alt="Real Homes Estate API Project">
                     <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Realtor - an amazing Real Estate Application. With rental homes and for-sale properties, advanced property filtering, property details ...</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="https://realhome.vercel.app/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
-                                <button (click)="open(content)" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                                <button (click)="open(content, 'realhomes')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
                             </div>
                             <small class="text-body-secondary">9 mins</small>
                         </div>
@@ -25,13 +25,13 @@
             </div>
             <div class="col">
                 <div class="card shadow-sm">
-                    <img src="assets/projects/kshoppings.png" alt="Real Homes Estate API Project">
+                    <img src="assets/projects/ks1.png" alt="Real Homes Estate API Project">
                     <div class="card-body">
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="https://kingsintersect.github.io/kshopings/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
-                                <button (click)="open(content)" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                                <button (click)="open(content, 'kshoppings')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
                             </div>
                             <small class="text-body-secondary">9 mins</small>
                         </div>
@@ -40,13 +40,13 @@
             </div>
             <div class="col">
                 <div class="card shadow-sm">
-                    <img src="assets/projects/chi-blog.png" alt="Real Homes Estate API Project">
+                    <img src="assets/projects/cb1.png" alt="Real Homes Estate API Project">
                     <div class="card-body">
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="https://chi-blog.vercel.app/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
-                                <button (click)="open(content)" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                                <button (click)="open(content, 'chiblog')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
                             </div>
                             <small class="text-body-secondary">9 mins</small>
                         </div>
@@ -60,22 +60,40 @@
 
 <ng-template #content let-modal>
 	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+		<h4 class="modal-title" id="modal-basic-title">{{title}}</h4>
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
-		<div class="container-fluid">
+		<div class="container">
             <div class="p-4 p-md-5 mb-5 rounded text-body-emphasis bg-body-secondary">
-                 <img src="assets/projects/realhomes.png" alt="Project Image" width="100%" height="100%">
+                <ngb-carousel *ngIf="imgUrl">
+                    <ng-template *ngFor="let image of imgUrl" ngbSlide>
+                        <div class="picsum-img-wrapper">
+                            <img  [src]="image" alt="Project Image" width="100%" height="100%"/>
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
             </div>
             <div class="row">
-                <div class="col lead fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, velit repellendus reprehenderit itaque reiciendis, sint illo fugit ratione aspernatur dignissimos eos assumenda harum blanditiis molestiae minima voluptatum eius neque possimus accusamus voluptas! Possimus fugit dolor distinctio beatae voluptates, sapiente nesciunt tenetur explicabo facere praesentium dolore error ipsa magni aliquid, ipsum dolores suscipit blanditiis porro perspiciatis numquam? Nulla illum nesciunt quas dolorem perspiciatis ea, minima architecto reiciendis, sequi nostrum cupiditate et velit ab harum nemo a id ipsam vitae ducimus quidem! Vero doloremque aliquid laudantium vel ut vitae accusantium optio distinctio, corrupti ipsa reprehenderit possimus fugit iste nihil voluptatem rem autem quia molestiae mollitia aut! Rem molestiae magnam quis ea delectus temporibus accusantium esse atque, debitis repellendus nesciunt ut tenetur, cupiditate repellat doloribus necessitatibus fugiat voluptatem dolor similique perspiciatis praesentium dolorem. Accusantium quis est accusamus? Aliquid iste ratione debitis voluptatibus doloribus ipsum repellendus laborum amet nulla, perferendis repellat animi porro a?</div>
+                <div [innerHTML]="description" class="col lead fs-4 fw-lighter text-secondary text-justify">{{description}}</div>
                 <div class="col">
                     <div class="p-5" style="background-color: #f8faff;">
                         <h2 class="bg-body-secondary px-3">Project Info</h2>
-                        <p class="description fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, doloremque.</p>
                         <ul class="list">
-                            <li><span>Rating</span>: <i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></li>
+                            <li id="rating_star">
+                                <span>Rating</span>: 
+                                <script>
+                                    // for (let i = 0; i < rating; i++) {
+                                    //     document.getElementByC("rating_star")
+                                    //     .innerHTML = "<i class='bi bi-star'>";
+                                    // }
+                                </script> 
+                                <i class="bi bi-star-fill d-inline-block mx-1 fs-6"></i>
+                                <i class="bi bi-star-fill d-inline-block mx-1 fs-6"></i>
+                                <i class="bi bi-star-fill d-inline-block mx-1 fs-6"></i>
+                                <i class="bi bi-star-fill d-inline-block mx-1 fs-6"></i>
+                                <i class="bi bi-star-fill d-inline-block mx-1 fs-6"></i>
+                            </li>
                             <li><span>Client</span>: Consumer API</li>
                             <li><span>Website</span>: <a href="https://realhome.vercel.app/">realhomes.com</a></li>
                             <li><span>Completed</span>: 17 Nov 2021</li>
@@ -84,8 +102,5 @@
                 </div>
             </div>
         </div>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
 	</div>
 </ng-template>
