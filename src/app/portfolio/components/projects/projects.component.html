@@ -1,54 +1,55 @@
-<div class="projects">
-    <div id="projects" class="header text-center pt-3 mt-5">
-        <h2>Projects</h2>
-        <h5>Check My Recent Projects</h5> 
+<div class="bg-body-tertiary">
+    <div class="projects">
+        <div id="projects" class="header text-center pt-3 mt-5">
+            <h2 class="ppp">Projects</h2>
+            <h5>Check My Recent Projects</h5> 
+        </div>
     </div>
-</div>
-
-<div class="album py-5 bg-body-tertiary">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="assets/projects/rh1.png" alt="Real Homes Estate API Project">
-                    <div class="card-body">
-                        <p class="card-text">Realtor - an amazing Real Estate Application. With rental homes and for-sale properties, advanced property filtering, property details ...</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="https://realhome.vercel.app/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
-                                <button (click)="open(content, 'realhomes')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+    <div class="album py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="assets/projects/rh1.png" alt="Real Homes Estate API Project">
+                        <div class="card-body">
+                            <p class="card-text">Realtor - an amazing Real Estate Application. With rental homes and for-sale properties, advanced property filtering, property details ...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://realhome.vercel.app/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
+                                    <button (click)="open(content, 'realhomes')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
                             </div>
-                            <small class="text-body-secondary">9 mins</small>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="assets/projects/ks1.png" alt="Real Homes Estate API Project">
-                    <div class="card-body">
-                        <p class="card-text">KSHOPPINGS - A real world E-Commerce Application with Angular, Firebase, Material UI and Bootstrap 5. The features of this ...</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="https://kingsintersect.github.io/kshopings/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
-                                <button (click)="open(content, 'kshoppings')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="assets/projects/ks1.png" alt="Real Homes Estate API Project">
+                        <div class="card-body">
+                            <p class="card-text">KSHOPPINGS - A real world E-Commerce Application with Angular, Firebase, Material UI and Bootstrap 5. The features of this ...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://kingsintersect.github.io/kshopings/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
+                                    <button (click)="open(content, 'kshoppings')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
                             </div>
-                            <small class="text-body-secondary">9 mins</small>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="assets/projects/cb1.png" alt="Real Homes Estate API Project">
-                    <div class="card-body">
-                        <p class="card-text">GraphQL - HeadlessCMS - With featured and recent posts, categories. full markdown articles, author information, comments ...</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="https://chi-blog.vercel.app/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
-                                <button (click)="open(content, 'chiblog')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="assets/projects/cb1.png" alt="Real Homes Estate API Project">
+                        <div class="card-body">
+                            <p class="card-text">GraphQL - HeadlessCMS - With featured and recent posts, categories. full markdown articles, author information, comments ...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://chi-blog.vercel.app/"><button type="button" class="btn btn-sm btn-outline-primary">Visit Website</button></a>
+                                    <button (click)="open(content, 'chiblog')" type="button" class="btn btn-sm btn-outline-secondary">Description</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
                             </div>
-                            <small class="text-body-secondary">9 mins</small>
                         </div>
                     </div>
                 </div>
@@ -56,6 +57,7 @@
         </div>
     </div>
 </div>
+
 
 
 <ng-template #content let-modal>

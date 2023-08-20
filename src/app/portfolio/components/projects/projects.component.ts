@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import anime from 'animejs/lib/anime.es.js';
 import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ServicesService } from 'src/app/services/services.service';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
 
   closeResult = '';
   title!: string;
@@ -20,6 +21,15 @@ export class ProjectsComponent {
 
   constructor(private modalService: NgbModal, private svs: ServicesService) {}
 
+  ngAfterViewInit() {
+	anime({
+		targets: ".ppp",
+		rotate: 'Iturn',
+		duration: 3500,
+		delay: 1000
+	})
+  }
+
 	open(content: any, productName: string) {
 
 		this.svs.loadProjets(productName).then((res)=>{
@@ -28,10 +38,9 @@ export class ProjectsComponent {
 			this.rating = res.rating;
 			this.client = res.client;
 			this.webAddress = res.webAddress;
-			// this.imgUrl.push("hhhh")
 			res["imgUrl"].map((img: string)=>{
 				this.imgUrl.push(img)
-			});console.log(this.imgUrl);
+			});
 
 			this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', fullscreen: true }).result.then(
 				(result) => {

@@ -1,5 +1,4 @@
 import { AfterViewInit, Component } from '@angular/core';
-// import * as anime from 'animejs';
 import anime from 'animejs/lib/anime.es.js';
 
 @Component({
@@ -13,7 +12,7 @@ export class HomeComponent implements AfterViewInit  {
 
   ngAfterViewInit(){
     anime({
-      targets: '.profesion',
+      targets: '.profesions',
       // translateX: 250,
       rotate: '1turn',
       // backgroundColor: '#FFF',

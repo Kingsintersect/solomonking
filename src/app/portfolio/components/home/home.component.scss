@@ -4,7 +4,15 @@
 
 .profile-img{
     border-radius: 50% !important;
+    margin: 5px;
 }
 #home {
 	background-color: beige;
+}
+.img-holder {
+	padding: 0px;
+	width: 330px;
+	border: 10px solid #05364d;
+	border-radius: 50%;
+	height: 330px;
 }
